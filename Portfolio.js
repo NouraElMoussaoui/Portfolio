@@ -1,5 +1,3 @@
-
-
 // Add floating animation with random delays
 document.addEventListener('DOMContentLoaded', () => {
     const socialLinks = document.querySelectorAll('.social-link');
@@ -110,6 +108,17 @@ gsap.from('.intro-container', {
     }
 });
 
+// gsap.from('.project-card', {
+//     opacity: 0,
+//     y: 50,
+//     duration: 0.8,
+//     stagger: 0.2,
+//     scrollTrigger: {
+//         trigger: '.projects-grid',
+//         start: 'top center',
+//         end: 'bottom center',
+//     }
+// });
 
 // -------------------
 
@@ -191,3 +200,21 @@ document.addEventListener('mousemove', (event) => {
     const rotateY = x * 30;
     cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 });
+
+document.querySelector('.cube').addEventListener('click', () => {
+    window.location.href = 'cube-contents.html';
+});
+
+
+//  fun fact -----------------
+
+// function showFunFact() {
+//     const funFact = document.getElementById('funFact');
+//     funFact.style.display = 'block';
+//     setTimeout(() => {
+//         funFact.style.display = 'none';
+//     }, 5000); // Show for 5 seconds
+// }
+
+// // Show the fun fact every 30 seconds
+// setInterval(showFunFact, 30000);
