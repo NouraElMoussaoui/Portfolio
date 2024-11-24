@@ -108,6 +108,7 @@ gsap.from('.intro-container', {
     }
 });
 
+
 // gsap.from('.project-card', {
 //     opacity: 0,
 //     y: 50,
@@ -218,3 +219,41 @@ document.querySelector('.cube').addEventListener('click', () => {
 
 // // Show the fun fact every 30 seconds
 // setInterval(showFunFact, 30000);
+
+// SKIILS---------------
+
+   // Animation for skill cards on scroll
+   gsap.from('.skill-card', {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    ease: 'power2.out',
+    scrollTrigger: {
+        trigger: '.skills-container',
+        start: 'top center+=100',
+        end: 'bottom center',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+// Hover effect for skill items
+document.querySelectorAll('.skill-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        gsap.to(item, {
+            duration: 0.3,
+            scale: 1.05,
+            backgroundColor: 'rgba(31, 41, 55, 0.9)',
+            ease: 'power1.out'
+        });
+    });
+
+    item.addEventListener('mouseleave', () => {
+        gsap.to(item, {
+            duration: 0.3,
+            scale: 1,
+            backgroundColor: 'rgba(26, 34, 51, 0.7)',
+            ease: 'power1.out'
+        });
+    });
+});
