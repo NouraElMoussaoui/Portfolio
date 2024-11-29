@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Interactive particle effect on hover (optional)
     function createParticle(x, y) {
         const particle = document.createElement('div');
         particle.style.cssText = `
@@ -91,7 +90,6 @@ document.head.appendChild(style);
      });
  }
 
- // Smooth scroll function
  function scrollToPage(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
@@ -203,22 +201,8 @@ document.addEventListener('mousemove', (event) => {
 });
 
 document.querySelector('.cube').addEventListener('click', () => {
-    window.location.href = 'cube-contents.html';
+    window.location.href = 'whoami.html';
 });
-
-
-//  fun fact -----------------
-
-// function showFunFact() {
-//     const funFact = document.getElementById('funFact');
-//     funFact.style.display = 'block';
-//     setTimeout(() => {
-//         funFact.style.display = 'none';
-//     }, 5000); // Show for 5 seconds
-// }
-
-// // Show the fun fact every 30 seconds
-// setInterval(showFunFact, 30000);
 
 // SKIILS---------------
 
