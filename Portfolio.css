@@ -676,7 +676,7 @@ main::after {
 }
 
 .skill-card {
-    background: linear-gradient(45deg, transparent, #FF6B6B22);
+    background: rgba(255, 255, 255, 0.05);;
     border-radius: 15px;
     padding: 3rem;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -763,7 +763,7 @@ main::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding-left: 90px;
+    /* padding-left: 90px; */
 }
 
 @media (max-width: 768px) {
