@@ -201,7 +201,7 @@ document.addEventListener('mousemove', (event) => {
 });
 
 document.querySelector('.cube').addEventListener('click', () => {
-    window.location.href = 'whoami.html';
+    window.location.href = 'coding-journey.html';
 });
 
 // SKIILS---------------

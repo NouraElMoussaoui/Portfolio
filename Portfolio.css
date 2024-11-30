@@ -342,7 +342,7 @@ main::after {
     background: rgba(255, 255, 255, 0.1);
     border: none;
     padding: 0.8rem 1.5rem;
-    color: white;
+    color: #796878;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s;
@@ -350,8 +350,9 @@ main::after {
 }
 
 .send-button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(15deg, transparent, #796878);
     transform: translateY(-2px);
+    color: #796878;
 }
 
 /* ----WHO I am  */
@@ -447,7 +448,7 @@ main::after {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background: linear-gradient(45deg, #4ECDC4, transparent);;
+    background: linear-gradient(45deg, #4ECDC4, transparent);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -675,10 +676,10 @@ main::after {
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(45deg, transparent, #FF6B6B22);
     border-radius: 15px;
-    padding: 2rem;
-    transition: all 0.3s;
+    padding: 3rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -691,18 +692,20 @@ main::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #FF6B6B22, #4ECDC422);
+    background: linear-gradient(45deg, #FF6B6B22, transparent);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateX(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card:hover::before {
-    opacity: 1;
+    opacity: 2;
 }
+
 .skill-header {
     display: flex;
     align-items: center;
@@ -729,18 +732,21 @@ main::after {
 .skill-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     gap: 1rem;
 }
 
 .skill-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.3rem 0.8rem;
+    background: linear-gradient(15deg, transparent, #796878);
+    padding: 0.5rem 1rem;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .skill-item:hover {
     background: rgba(31, 41, 55, 0.7);
+       transform: translateX(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .skills-footer {
@@ -757,6 +763,7 @@ main::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding-left: 90px;
 }
 
 @media (max-width: 768px) {
@@ -776,7 +783,7 @@ main::after {
 .contact-title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    background: linear-gradient(45deg, #FF6B6B22, #4ECDC4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -805,7 +812,7 @@ main::after {
 .form-group label {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    color: #4ECDC4;
+    color: #796878;
 }
 
 .form-group input,
@@ -815,7 +822,7 @@ main::after {
     border: none;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    color: white;
     font-family: 'Consolas', monospace;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -832,11 +839,10 @@ main::after {
     margin-top: 1rem;
 }
 
-
 /* coding journey style */
 
 .journey {
-    background: linear-gradient(45deg, #4ECDC4, transparent);
+    background: linear-gradient(45deg, #FF6B6B22, transparent);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
