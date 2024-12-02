@@ -213,7 +213,36 @@ main::after {
     transform: scaleY(1);
 }
 
-/* Updated Card Styles */
+.explore {
+    transition: color 0.5s ease;
+    font-style: italic;
+    color: #66b2b2;
+        font-size: 14px;
+        border: 1px solid transparent;
+        padding: 10px; 
+        border-radius: 5px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        margin: 10px auto;
+        position: absolute;
+        right: 200px;
+}
+
+@media (max-width: 600px) {
+    .explore {
+      position: static;
+      margin: 10px;
+    }
+  }
+
+  .whoami {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px; 
+    z-index: 2;
+    color: #999999;
+}
+/* Card Styles */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -256,7 +285,7 @@ main::after {
 .card:hover {
     /* transform: translateY(-5px); */
     transform: scale(1.1);
-    z-index: 1; /* Bring the hovered item to the front */
+    z-index: 1;
 }
 
 .card:hover::before {
@@ -547,6 +576,8 @@ main::after {
 
 .cube-container {
     perspective: 1000px;
+    z-index: 1; /* Ensure it is below the .whoami div */
+    margin: 80px;
 }
 
 .cube {

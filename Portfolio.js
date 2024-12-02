@@ -58,39 +58,44 @@ style.textContent = `
                     opacity: 0;
                 }
             }
+            .symbol {
+                color: #b2d8d8;
+                font-weight: initial; 
+                opacity: 0.2;
+            }
         `;
 document.head.appendChild(style);
 
 
 // ------background------
 
- // Initialize GSAP
- gsap.registerPlugin(ScrollTrigger);
+// Initialize GSAP
+gsap.registerPlugin(ScrollTrigger);
 
- // Create floating symbols background
- const symbols = '∫∑∏√πλ{}[]()<>+-*/&|!;#include while(true) if(math==code)';
- 
- for (let i = 0; i < 50; i++) {
-     const symbol = document.createElement('div');
-     symbol.className = 'symbol';
-     symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-     symbol.style.fontSize = Math.random() * 20 + 10 + 'px';
-     symbol.style.left = Math.random() * 100 + 'vw';
-     symbol.style.top = Math.random() * 100 + 'vh';
-     document.body.appendChild(symbol);
+// Create floating symbols background
+const symbols = '∫∑∏√πλ{}[]()<>+-*/&|!;#include while(true) if(math==code)';
 
-     gsap.to(symbol, {
-         y: 'random(-100, 100)',
-         x: 'random(-100, 100)',
-         rotation: 'random(-180, 180)',
-         duration: 'random(3, 6)',
-         repeat: -1,
-         yoyo: true,
-         ease: 'none'
-     });
- }
+for (let i = 0; i < 50; i++) {
+    const symbol = document.createElement('div');
+    symbol.className = 'symbol';
+    symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    symbol.style.fontSize = Math.random() * 20 + 10 + 'px';
+    symbol.style.left = Math.random() * 100 + 'vw';
+    symbol.style.top = Math.random() * 100 + 'vh';
+    document.body.appendChild(symbol);
 
- function scrollToPage(id) {
+    gsap.to(symbol, {
+        y: 'random(-100, 100)',
+        x: 'random(-100, 100)',
+        rotation: 'random(-180, 180)',
+        duration: 'random(3, 6)',
+        repeat: -2,
+        yoyo: true,
+        ease: 'none'
+    });
+}
+
+function scrollToPage(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -125,24 +130,24 @@ gsap.from('.intro-container', {
 function generate3DBackground() {
     // More complex symbols that represent math, code, and abstract concepts
     const symbols = [
-        '∫', '∑', '∏', '√', 'π', 'λ', 
-        '{', '}', '[', ']', '(', ')', 
-        '<', '>', '+', '-', '*', '/', 
-        '&', '|', '!', ';', '#', 
-        'int', 'float', 'void', 'class', 
-        'def', 'import', 'return', 
+        '∫', '∑', '∏', '√', 'π', 'λ',
+        '{', '}', '[', ']', '(', ')',
+        '<', '>', '+', '-', '*', '/',
+        '&', '|', '!', ';', '#',
+        'int', 'float', 'void', 'class',
+        'def', 'import', 'return',
         '∞', '≈', '≠', '∇', 'Σ', 'Π'
     ];
 
     const container = document.body;
-    
+
     function createSymbol() {
         const symbol = document.createElement('div');
         symbol.className = 'symbol-3d';
-        
+
         // Randomize symbol content
         symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-        
+
         // 3D-like styling
         symbol.style.cssText = `
             position: fixed;
@@ -160,9 +165,9 @@ function generate3DBackground() {
             pointer-events: none;
             z-index: -1;
         `;
-        
+
         container.appendChild(symbol);
-        
+
         // Animate with GSAP for smooth 3D movement
         gsap.to(symbol, {
             duration: Math.random() * 10 + 5,
@@ -206,8 +211,8 @@ document.querySelector('.cube').addEventListener('click', () => {
 
 // SKIILS---------------
 
-   // Animation for skill cards on scroll
-   gsap.from('.skill-card', {
+// Animation for skill cards on scroll
+gsap.from('.skill-card', {
     duration: 1,
     y: 50,
     opacity: 0,
@@ -241,3 +246,16 @@ document.querySelectorAll('.skill-item').forEach(item => {
         });
     });
 });
+
+
+// explore color
+
+const exploreElement = document.querySelector('.explore');
+const colors = ['#997a8d', '#aa98a9', '#b39eb5', '#777696', '#796878'];
+
+let colorIndex = 0;
+
+setInterval(() => {
+  exploreElement.style.color = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length;
+}, 5000);
