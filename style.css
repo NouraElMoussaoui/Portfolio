@@ -114,11 +114,6 @@ main::after {
     .footer {
         padding: 0.5rem 1rem;
     }
-    .explore {
-        position: static;
-        margin: 10px;
-        transform: translateX(0); 
-      }
 }
 
 /* Medium devices (tablets, 600px to 1024px) */
@@ -134,11 +129,6 @@ main::after {
     .footer {
         padding: 1rem 1.5rem;
     }
-    .explore {
-        position: static;
-        margin: 10px;
-        transform: translateX(0); 
-      }
 }
 
 /* Large devices (desktops, 1024px and up) */
@@ -158,11 +148,6 @@ main::after {
         max-width: 1200px;
         margin: 0 auto;
     }
-    .explore {
-        position: static;
-        margin: 10px;
-        transform: translateX(0); 
-      }
 }
 
 .symbol {
@@ -294,6 +279,13 @@ main::after {
 
 .explore:hover {
     transform: translateX(50px);
+}
+@media (min-width: 601px) and (max-width: 1024px){
+    .explore {
+        position: static;
+        margin: 10px;
+        transform: translateX(0); 
+    }
 }
 
 .whoami {
