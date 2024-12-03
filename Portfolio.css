@@ -99,7 +99,71 @@ main::after {
     opacity: 0.9;
 }
 
+/* Media queries for responsiveness */
 
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .header {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 0.5rem 1rem;
+    }
+    .explore {
+        position: static;
+        margin: 10px;
+        transform: translateX(0); 
+      }
+}
+
+/* Medium devices (tablets, 600px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        padding: 1.5rem 1.5rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 1rem 1.5rem;
+    }
+    .explore {
+        position: static;
+        margin: 10px;
+        transform: translateX(0); 
+      }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1025px) {
+    .header {
+        padding: 2rem;
+    }
+
+    main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        padding: 1rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .explore {
+        position: static;
+        margin: 10px;
+        transform: translateX(0); 
+      }
+}
 
 .symbol {
     position: fixed;
@@ -214,34 +278,37 @@ main::after {
 }
 
 .explore {
-    transition: color 0.5s ease;
+    transition: color 0.5s ease, transform 0.5s ease;
     font-style: italic;
     color: #66b2b2;
-        font-size: 14px;
-        border: 1px solid transparent;
-        padding: 10px; 
-        border-radius: 5px; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        max-width: 300px;
-        margin: 10px auto;
-        position: absolute;
-        right: 200px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    padding: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 10px auto;
+    position: absolute;
+    right: 200px;
 }
 
-@media (max-width: 600px) {
-    .explore {
-      position: static;
-      margin: 10px;
-    }
-  }
+.explore:hover {
+    transform: translateX(50px);
+}
 
-  .whoami {
+.whoami {
+    transition: color 0.5s ease, transform 0.5s ease;
     position: relative;
     margin-top: 20px;
     padding: 10px; 
     z-index: 2;
     color: #999999;
 }
+
+.whoami:hover {
+    transform: translateY(50px);
+}
+
 /* Card Styles */
 .cards-grid {
     display: grid;
