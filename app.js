@@ -277,3 +277,12 @@ setInterval(() => {
   exploreElement.style.color = colors[colorIndex];
   colorIndex = (colorIndex + 1) % colors.length;
 }, 5000);
+
+document.addEventListener('scroll', function() {
+    const socialContainer = document.querySelector('.social-container');
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        socialContainer.classList.add('show');
+    } else {
+        socialContainer.classList.remove('show');
+    }
+});
