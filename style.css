@@ -41,8 +41,8 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10, 10, 10, 0.85);
-    /* background: black */
+    /* background: rgba(10, 10, 10, 0.85); */
+    background: black;
     backdrop-filter: transparent; 
     z-index: 1000;
     border-bottom: none;
