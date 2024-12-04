@@ -121,14 +121,17 @@ main::after {
 /* Small devices (phones, 600px and down) */
 @media (max-width: 600px) {
     .header {
+        font-size: medium;
         padding: 1rem;
     }
 
     main {
+        font-size: medium;
         padding: 0.5rem;
     }
 
     .footer {
+        font-size: medium;
         padding: 0.5rem 0.5rem;
     }
 
