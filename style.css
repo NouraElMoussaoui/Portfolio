@@ -133,6 +133,7 @@ main::after {
     .footer {
         font-size: medium;
         padding: 0.5rem 0.5rem;
+        margin-top: 1rem;
     }
 
     .explore {
