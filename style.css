@@ -119,6 +119,7 @@ main::after {
 
 /* Media queries for responsiveness */
 
+/*need to fix the footer and skills page when I visit the website from the */
 /* Small devices (phones, 600px and down) */
 @media (max-width: 600px) {
     .header {
