@@ -15,6 +15,22 @@ body
     font-family: 'Consolas', monospace;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#vanta-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -83,7 +99,7 @@ main::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(10, 10, 10, 0.85); 
+    background: transparent; 
     backdrop-filter: transparent; 
     z-index: 1000;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); 
@@ -115,6 +131,9 @@ main::after {
     .footer {
         padding: 0.5rem 1rem;
     }
+    .explore {
+        display: none;
+    }
 }
 
 /* Medium devices (tablets, 600px to 1024px) */
@@ -129,6 +148,9 @@ main::after {
 
     .footer {
         padding: 1rem 1.5rem;
+    }
+    .explore {
+        display: none;
     }
 }
 
@@ -151,6 +173,27 @@ main::after {
     }
 }
 
+@media (max-width: 600px) {
+    .cards-grid {
+        margin-bottom: 20px;
+    }
+    .social-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-link {
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .symbol {
     position: fixed;
     color: rgba(255, 255, 255, 0.1);
@@ -162,6 +205,13 @@ main::after {
 .symbol-3d {
     pointer-events: none;
     position: fixed;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.symbol-3d:hover {
+    transform: scale(1.5) rotateX(360deg) rotateY(360deg);
+    opacity: 1;
 }
 
 .page {
@@ -281,6 +331,7 @@ main::after {
 .explore:hover {
     transform: translateX(50px);
 }
+
 @media (min-width: 601px) and (max-width: 1024px){
     .explore {
         position: static;
@@ -629,14 +680,11 @@ main::after {
     animation: float 3s ease-in-out infinite;
 }
 
-
-/* -----------cube style---------- */
-
 /* -----------cube style---------- */
 
 .cube-container {
     perspective: 1000px;
-    z-index: 1; /* Ensure it is below the .whoami div */
+    z-index: 1;
     margin: 80px;
 }
 
@@ -646,24 +694,24 @@ main::after {
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(45deg) rotateY(45deg);
-    animation: rotate 5s infinite linear;
+    animation: rotate 8s infinite linear; /* Slowed down the animation */
 }
 
 .face {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: linear-gradient(to bottom, #4ECDC4, transparent);
-    border: 1px solid #ccc;
+    background: linear-gradient(to bottom, #4ECDC4, transparent);;
+    border: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 
-.front { transform: translateZ(100px); }
+.front { transform: rotateY(0deg) translateZ(100px); }
 .back { transform: rotateY(180deg) translateZ(100px); }
 .left { transform: rotateY(-90deg) translateZ(100px); }
 .right { transform: rotateY(90deg) translateZ(100px); }
@@ -671,9 +719,17 @@ main::after {
 .bottom { transform: rotateX(-90deg) translateZ(100px); }
 
 @keyframes rotate {
-    from { transform: rotateX(45deg) rotateY(45deg); }
-    to { transform: rotateX(45deg) rotateY(405deg); }
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
 }
+
+/* @keyframes rotate {
+    0% { transform: rotateX(45deg) rotateY(45deg); }
+    25% { transform: rotateX(45deg) rotateY(135deg); }
+    50% { transform: rotateX(135deg) rotateY(135deg); }
+    75% { transform: rotateX(135deg) rotateY(225deg); }
+    100% { transform: rotateX(45deg) rotateY(405deg); }
+} */
 
 /* ---------Projects page------------ */
 

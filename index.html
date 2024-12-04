@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noura's Portfolio</title>
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+
 </head>
+
 <body>
+    <!-- <div id="vanta-background"></div> -->
+
     <header class="header">
-        <nav class = "nav-container">
-          <a href="index.html" class="nav-btn">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-btn">
                 <img src="./icons/home.png" alt="home">
                 <span class="nav-tooltip">home</span>
             </a>
@@ -30,8 +36,8 @@
         </nav>
         <div class="explore">"Let your curiosity lead the way"</div>
     </header>
-        <main id="home" class="page">
-            <div class="cube-container">
+    <main id="home" class="page">
+        <div class="cube-container">
                 <div class="cube">
                     <div class="face left"></div>
                     <div class="face back"></div>
@@ -41,39 +47,39 @@
                     <div class="face bottom"></div>
                 </div>
             </div>
-            <div class="whoami">Hi, I'm Noura El Moussaoui — a passionate learner, problem solver, and data enthusiast</div>
-            <div class="cards-grid">
-                <a href="whoami.html" class="card-link">
-                    <div class="card" id="coding-journey-card">
-                        <div class="card-icon">
-                            <img src="./icons/code.png" alt="Code Icon">
-                        </div>
-                        <h3>Learning Journey</h3>
-                        <p>Explore the path of continuous learning and growth</p>
+        <div class="whoami">Hi, I'm Noura El Moussaoui — a passionate learner, problem solver, and data enthusiast</div>
+        <div class="cards-grid">
+            <a href="whoami.html" class="card-link">
+                <div class="card" id="coding-journey-card">
+                    <div class="card-icon">
+                        <img src="./icons/code.png" alt="Code Icon">
                     </div>
-                </a>
-                <a href="projects_sec.html" class="card-link">
-                    <div class="card">
-                        <div class="card-icon">
-                            <img src="./icons/problem-solving.png" alt="Problem Solver Icon">
-                        </div>
-                        <h3>Problem Solver</h3>
-                        <p>Bridging the gap between mathematical thinking and programming logic.</p>
+                    <h3>Learning Journey</h3>
+                    <p>Explore the path of continuous learning and growth</p>
+                </div>
+            </a>
+            <a href="projects_sec.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/problem-solving.png" alt="Problem Solver Icon">
                     </div>
-                </a>
-                <a href="https://profiles.datawars.io/elmoussaoui101noura" target="_blank" class="card-link">
-                    <div class="card">
-                        <div class="card-icon">
-                            <img src="./icons/analysis.png" alt="Database Icon">
-                        </div>
-                        <h3>Data Enthusiast</h3>
-                        <p>Follow my journey as I solve coding challenges and grow my skills on DataWars.</p>
+                    <h3>Problem Solver</h3>
+                    <p>Bridging the gap between mathematical thinking and programming logic.</p>
+                </div>
+            </a>
+            <a href="https://profiles.datawars.io/elmoussaoui101noura" target="_blank" class="card-link">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/analysis.png" alt="Database Icon">
                     </div>
-                </a>
-            
-            </div>  
-        </main>
-    
+                    <h3>Data Enthusiast</h3>
+                    <p>Follow my journey as I solve coding challenges and grow my skills on DataWars.</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
     <footer class="footer">
         <div class="social-container">
             <div class="social-container">
@@ -81,16 +87,86 @@
                     <img src="./icons/email.png" alt="Email">
                     <span class="social-tooltip">Email</span>
                 </a>
-                <a href="https://www.linkedin.com/in/noura-el-moussaoui-4a917b222/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <a href="https://www.linkedin.com/in/noura-el-moussaoui-4a917b222/" target="_blank"
+                    rel="noopener noreferrer" class="social-link">
                     <img src="./icons/linkdin.png" alt="LinkedIn">
                     <span class="social-tooltip">LinkedIn</span>
                 </a>
-                <a href="https://github.com/NouraElMoussaoui" target="_blank" rel="noopener noreferrer" class="social-link">
+                <a href="https://github.com/NouraElMoussaoui" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
                     <img src="./icons/github.png" alt="GitHub">
                     <span class="social-tooltip">GitHub</span>
                 </a>
             </div>
-    </footer> 
+    </footer>
     <script src="app.js"></script>
+    <!-- <script>
+        // Three.js setup
+        let scene, camera, renderer, fractalGroup;
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('fractal-container').appendChild(renderer.domElement);
+
+            fractalGroup = new THREE.Group();
+            scene.add(fractalGroup);
+
+            camera.position.z = 400;
+
+            createFractal(0, 0, 0, 100);
+
+            animate();
+        }
+
+        function createFractal(x, y, z, len) {
+            if (len < 2) return;
+
+            let geometry = new THREE.CylinderGeometry(0.5, 0.5, len, 8);
+            let material = new THREE.MeshBasicMaterial({ color: 0x000000 });
+            let cylinder = new THREE.Mesh(geometry, material);
+
+            cylinder.position.set(x, y + len / 2, z);
+            fractalGroup.add(cylinder);
+
+            let newLen = len * 0.67;
+
+            createFractal(x, y + len, z, newLen);
+            createFractal(x + newLen, y + len, z, newLen);
+            createFractal(x - newLen, y + len, z, newLen);
+            createFractal(x, y + len, z + newLen, newLen);
+            createFractal(x, y + len, z - newLen, newLen);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            fractalGroup.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+
+        init();
+        // GSAP and ScrollTrigger setup
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(fractalGroup.rotation, {
+            y: 2 * Math.PI,
+            scrollTrigger: {
+                trigger: "#fractal-container",
+                start: "top center",
+                end: "bottom center",
+                scrub: true,
+                markers: true
+            }
+        });
+    </script> -->
 </body>
+
 </html>

@@ -136,7 +136,7 @@ function generate3DBackground() {
         '&', '|', '!', ';', '#',
         'int', 'float', 'void', 'class',
         'def', 'import', 'return',
-        '∞', '≈', '≠', '∇', 'Σ', 'Π'
+        '∞', '≈', '≠', '∇', 'Σ', 'Π', 'SELECT', 'def'
     ];
 
     const container = document.body;
@@ -161,7 +161,7 @@ function generate3DBackground() {
                 rotateX(${Math.random() * 360}deg) 
                 rotateY(${Math.random() * 360}deg) 
                 rotateZ(${Math.random() * 360}deg);
-            opacity: ${Math.random() * 0.3 + 0.1};
+            opacity: ${Math.random() * 0.5 + 0.1};
             pointer-events: none;
             z-index: -1;
         `;
@@ -196,13 +196,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ----------------cube animation 
 
+// document.addEventListener('mousemove', (event) => {
+//     const cube = document.querySelector('.cube');
+//     const x = (event.clientX / window.innerWidth - 0.5) * 2;
+//     const y = (event.clientY / window.innerHeight - 0.5) * 2;
+//     const rotateX = y * 30;
+//     const rotateY = x * 30;
+//     cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+// });
+
 document.addEventListener('mousemove', (event) => {
     const cube = document.querySelector('.cube');
     const x = (event.clientX / window.innerWidth - 0.5) * 2;
     const y = (event.clientY / window.innerHeight - 0.5) * 2;
-    const rotateX = y * 30;
-    const rotateY = x * 30;
-    cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    cube.style.transform = `rotateX(${y * 30}deg) rotateY(${x * 30}deg)`;
 });
 
 document.querySelector('.cube').addEventListener('click', () => {
