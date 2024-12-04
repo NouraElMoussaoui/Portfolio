@@ -125,15 +125,25 @@ main::after {
     }
 
     main {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .footer {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.5rem;
         /* display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;*/
+    }
+
+    .social-container {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        z-index: 1;
     }
     .explore {
         display: none;
@@ -178,43 +188,6 @@ main::after {
         margin: 0 auto;
     }
 }
-
-/* Hide social-container on small screens */
-@media (max-width: 600px) {
-    .social-container {
-        display: none;
-    }
-
-    .social-container.show {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: white;
-        justify-content: center;
-    }
-}
-/* 
-@media (max-width: 600px) {
-    .cards-grid {
-        margin-bottom: 20px;
-    }
-    .social-container {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .social-link {
-        margin: 5px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-} */
 
 .symbol {
     position: fixed;
