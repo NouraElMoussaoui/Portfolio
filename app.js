@@ -278,11 +278,9 @@ setInterval(() => {
   colorIndex = (colorIndex + 1) % colors.length;
 }, 5000);
 
-document.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
     const socialContainer = document.querySelector('.social-container');
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        socialContainer.classList.add('show');
-    } else {
-        socialContainer.classList.remove('show');
+        socialContainer.classList.remove('hidden');
     }
 });

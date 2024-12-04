@@ -558,6 +558,11 @@ main::after {
 }
 
 /* ------------socia links --------- */
+
+.hidden {
+    display: none;
+}
+
 .social-container {
     position: fixed;
     bottom: 2rem;
