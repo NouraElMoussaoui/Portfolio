@@ -923,7 +923,11 @@ svg {
     border-radius: 15px;
     font-size: 0.8rem;
 }
-
+.skill-title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4ECDC4;
+}
 .skills-footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
