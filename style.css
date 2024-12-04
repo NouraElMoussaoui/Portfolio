@@ -350,7 +350,7 @@ main::after {
 }
 
 .whoami:hover {
-    transform: translateY(50px);
+    transform: scale(1.2); 
 }
 
 /* Card Styles */
@@ -682,7 +682,7 @@ main::after {
 
 /* -----------cube style---------- */
 
-.cube-container {
+/* .cube-container {
     perspective: 1000px;
     z-index: 1;
     margin: 80px;
@@ -695,7 +695,7 @@ main::after {
     transform-style: preserve-3d;
     transform: rotateX(45deg) rotateY(45deg);
     animation: rotate 8s infinite linear; /* Slowed down the animation */
-}
+/* }
 
 .face {
     position: absolute;
@@ -709,9 +709,9 @@ main::after {
     font-size: 24px;
     font-weight: bold;
     transition: background 0.2s;
-}
+} */
 
-.front { transform: rotateY(0deg) translateZ(100px); }
+/* .front { transform: rotateY(0deg) translateZ(100px); }
 .back { transform: rotateY(180deg) translateZ(100px); }
 .left { transform: rotateY(-90deg) translateZ(100px); }
 .right { transform: rotateY(90deg) translateZ(100px); }
@@ -721,7 +721,7 @@ main::after {
 @keyframes rotate {
     0% { transform: rotateX(0deg) rotateY(0deg); }
     100% { transform: rotateX(360deg) rotateY(360deg); }
-}
+} */
 
 /* @keyframes rotate {
     0% { transform: rotateX(45deg) rotateY(45deg); }
@@ -731,6 +731,33 @@ main::after {
     100% { transform: rotateX(45deg) rotateY(405deg); }
 } */
 
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    perspective: 1000px;
+}
+
+svg {
+    border: 1px solid transparent;
+    transform-style: preserve-3d;
+    transform: translateY(10px);
+    /* animation: rotate 5s infinite linear; */
+}
+
+@keyframes moveCurve {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-300px, -100px);
+    }
+}
+
+.moving-curve {
+    animation: moveCurve 5s linear infinite;
+}
 /* ---------Projects page------------ */
 
 .projects-grid {
