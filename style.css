@@ -99,7 +99,7 @@ main::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent; 
+    background: black; 
     backdrop-filter: transparent; 
     z-index: 1000;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); 
@@ -112,6 +112,7 @@ main::after {
     left: 0;
     right: 0;
     height: 3px;
+    background: black;
     /* background: linear-gradient(90deg, rgba(78, 205, 196, 1), rgba(255, 107, 107, 0.5)); */
     opacity: 0.9;
 }
@@ -167,30 +168,9 @@ main::after {
     }
 
     .footer {
-        padding: 2rem;
+        padding: 3rem;
     }
 }
-
-/* @media (max-width: 600px) {
-    .cards-grid {
-        margin-bottom: 20px;
-    }
-    .social-container {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .social-link {
-        margin: 5px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-} */
 
 .symbol {
     position: fixed;
