@@ -196,35 +196,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ----------------cube animation 
 
-// document.addEventListener('mousemove', (event) => {
-//     const cube = document.querySelector('.cube');
-//     const x = (event.clientX / window.innerWidth - 0.5) * 2;
-//     const y = (event.clientY / window.innerHeight - 0.5) * 2;
-//     const rotateX = y * 30;
-//     const rotateY = x * 30;
-//     cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-// });
-
-// document.addEventListener('mousemove', (event) => {
-//     const cube = document.querySelector('.cube');
-//     const x = (event.clientX / window.innerWidth - 0.5) * 2;
-//     const y = (event.clientY / window.innerHeight - 0.5) * 2;
-//     cube.style.transform = `rotateX(${y * 30}deg) rotateY(${x * 30}deg)`;
-// });
-
-// document.querySelector('.cube').addEventListener('click', () => {
-//     window.location.href = 'coding-journey.html';
-// });
-
-// --------curve animation --------
-document.addEventListener('DOMContentLoaded', (event) => {
-    const curve = document.querySelector('.moving-curve');
-    curve.style.animationPlayState = 'running';
+document.addEventListener('mousemove', (event) => {
+    const cube = document.querySelector('.cube');
+    const x = (event.clientX / window.innerWidth - 0.5) * 2;
+    const y = (event.clientY / window.innerHeight - 0.5) * 2;
+    const rotateX = y * 30;
+    const rotateY = x * 30;
+    cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 });
 
-document.querySelector('.chart-container').addEventListener('click', () => {
+document.addEventListener('mousemove', (event) => {
+    const cube = document.querySelector('.cube');
+    const x = (event.clientX / window.innerWidth - 0.5) * 2;
+    const y = (event.clientY / window.innerHeight - 0.5) * 2;
+    cube.style.transform = `rotateX(${y * 30}deg) rotateY(${x * 30}deg)`;
+});
+
+document.querySelector('.cube').addEventListener('click', () => {
     window.location.href = 'coding-journey.html';
 });
+
+// // --------curve animation --------
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const curve = document.querySelector('.moving-curve');
+//     curve.style.animationPlayState = 'running';
+// });
+
+// document.querySelector('.chart-container').addEventListener('click', () => {
+//     window.location.href = 'coding-journey.html';
+// });
 
 
 // SKIILS---------------
