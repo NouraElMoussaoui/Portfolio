@@ -145,6 +145,20 @@ main::after {
         gap: 1rem;
         z-index: 1;
     }
+
+    .social-link {
+        position: relative;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #4ECDC4, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    
     .explore {
         display: none;
     }
