@@ -13,6 +13,8 @@ body
     padding: 0;
     box-sizing: border-box;
     font-family: 'Consolas', monospace;
+    /* display: flex; */
+    /* justify-content: space-between; */
 }
 
 body, html {
@@ -22,14 +24,14 @@ body, html {
     overflow-x: hidden;
 }
 
-#vanta-background {
+/* #vanta-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-}
+} */
 
 .header {
     position: fixed;
@@ -40,7 +42,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent; 
+    background: rgba(0, 0, 0, 0.2); 
     backdrop-filter: transparent; 
     z-index: 1000;
     border-bottom: none;
@@ -90,7 +92,7 @@ main::after {
     z-index: -1;
 }
 
-.footer {
+/* .footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -99,7 +101,7 @@ main::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent; 
+    background: rgba(0, 0, 0, 0.2); 
     backdrop-filter: transparent; 
     z-index: 1000;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); 
@@ -112,10 +114,9 @@ main::after {
     left: 0;
     right: 0;
     height: 3px;
-    background: black;
-    /* background: linear-gradient(90deg, rgba(78, 205, 196, 1), rgba(255, 107, 107, 0.5)); */
+    background: rgba(0, 0, 0, 0.2);
     opacity: 0.9;
-}
+} */
 
 /* Media queries for responsiveness */
 
@@ -123,11 +124,13 @@ main::after {
 /* Small devices (phones, 600px and down) */
 @media (max-width: 600px) {
     .header {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     main {
         padding: 1rem;
+        font-size: 0.5 rem;
+        margin: 0 auto;
     }
 
     .footer {
@@ -141,11 +144,16 @@ main::after {
 /* Medium devices (tablets, 600px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .header {
-        padding: 1.5rem 1.5rem;
+        padding: 0.25rem;
+        margin-top : 0px;
     }
 
     main {
-        padding: 1.5rem;
+        /* padding: 1rem; */
+        padding-top: 2rem ;
+        font-size: 0.5rem;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .footer {
@@ -159,12 +167,18 @@ main::after {
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1025px) {
     .header {
-        padding: 2rem;
+        /* padding: 2rem; */
+        padding: 0.75rem;
+        font-size: 0.9rem; 
     }
 
     main {
-        padding: 2rem;
+        /* padding: 2rem;
         max-width: 1200px;
+        margin: 0 auto; */
+        padding-top: 0.5rem ;
+        font-size: 0.8rem;
+        max-width: 90%;
         margin: 0 auto;
     }
 
@@ -322,15 +336,27 @@ main::after {
 .whoami {
     transition: color 0.5s ease, transform 0.5s ease;
     position: relative;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 10px; 
     z-index: 2;
     color: #999999;
     transition: transform 0.3s ease;
+    font-size: medium;
+    text-align: center;
 }
 
 .whoami:hover {
     transform: scaleX(1.2);
+}
+
+@media (max-width: 600px) and (max-width: 1024px) {
+    .whoami {
+        font-size: small;
+        padding: 5px;
+        color: #999999;
+        transform: scale(0.9);
+        text-align: center;
+    }
 }
 
 /* Card Styles */
@@ -342,6 +368,11 @@ main::after {
     max-width: 1200px;
     padding: 2rem;
     margin-top: 3rem; 
+    margin-right: 3rem;
+    /* margin-bottom: 3rem; */
+    flex-grow: 1;
+
+
 }
 
 .card {
@@ -481,8 +512,10 @@ main::after {
 .timeline-container {
     position: relative;
     max-width: 600px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-right: 4rem;
     padding: 20px 0;
+    font-size: medium;
 }
 
 .timeline-event {
@@ -556,14 +589,18 @@ main::after {
 .social-container {
     position: fixed;
     bottom: 0.5rem;
-    right: 2rem;
+    right: 0;
+    /* right: 2rem; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
     z-index: 100;
+    align-items: center;
+    margin-right: 1rem;
 }
 
 .social-link {
+    margin: 5px 0;
     position: relative;
     width: 3.5rem;
     height: 3.5rem;
@@ -665,7 +702,9 @@ main::after {
 .cube-container {
     perspective: 1000px;
     z-index: 1;
-    margin: 80px;
+    /* margin: 80px; */
+    margin: 10rem;
+    display: center;
 }
 
 .cube {
@@ -748,6 +787,9 @@ svg {
     width: 100%;
     max-width: 1200px;
     padding: 2rem;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    font-size: medium;
 }
 
 .project-card {
@@ -1006,7 +1048,9 @@ svg {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     display: block;
-    margin: 20px auto;
+    margin-top: 7rem;
+    margin-right: 2rem;
+    /* margin: 20px auto; */
     max-width: 80%;
     height: auto;
     transition: background 0.3s ease, box-shadow 0.3s ease;
