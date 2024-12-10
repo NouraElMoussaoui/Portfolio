@@ -985,7 +985,10 @@ svg {
 
 .contact-title {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-right: 8rem;
+    margin-left: 4rem;
     background: linear-gradient(45deg, #FF6B6B22, #4ECDC4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1000,10 +1003,24 @@ svg {
 .contact-form {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-right: 10rem;
+    /* margin-left: 4rem; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+@media (max-width: 600px) and (max-width: 1024px){
+    .contact-form {
+        margin-right: 7rem;
+        max-width: 100%;
+        font-size: small;
+        padding-left: 4rem;
+    }
+    .contact-title{
+        font-size:large;
+    }
 }
 
 .form-group {
