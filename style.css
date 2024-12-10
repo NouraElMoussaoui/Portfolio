@@ -337,6 +337,7 @@ main::after {
     transition: color 0.5s ease, transform 0.5s ease;
     position: relative;
     margin-top: 5px;
+    margin-right: 3rem;
     padding: 10px; 
     z-index: 2;
     color: #999999;
@@ -368,7 +369,7 @@ main::after {
     max-width: 1200px;
     padding: 2rem;
     margin-top: 3rem; 
-    margin-right: 3rem;
+    margin-right: 4rem;
     /* margin-bottom: 3rem; */
     flex-grow: 1;
 
@@ -388,7 +389,7 @@ main::after {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 200px; 
+    height: 250px; 
 }
 
 .card::before {
@@ -516,6 +517,7 @@ main::after {
     margin-right: 4rem;
     padding: 20px 0;
     font-size: medium;
+    margin-top: 7rem;
 }
 
 .timeline-event {
