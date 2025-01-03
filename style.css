@@ -1105,3 +1105,40 @@ svg {
 .img-level:hover {
     transform: scale(2);
 }
+
+
+
+.projects-grid {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    gap: 20px;
+}
+
+.data-item {
+    margin-top: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    transition: color 0.5s ease, transform 0.5s ease;
+    position: relative;
+    margin-top: 5px;
+    margin-right: 3rem;
+    padding: 10px; 
+    z-index: 2;
+    color: #999999;
+    transition: transform 0.3s ease;
+    font-size: medium;
+    text-align: center;
+}
+.data-item:hover {
+    transform: scaleX(1.2);
+}
+
+.datawars-profile a {
+    color: linear-gradient(45deg, #FF6B6B22, transparent);
+}
+.datawars-profile a:hover {
+    color: linear-gradient(45deg, transparent, #4ECDC4); 
+}
+.datawars-profile a:active {
+    color: #796878;
+}
