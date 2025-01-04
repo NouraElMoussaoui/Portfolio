@@ -723,7 +723,7 @@ main::after {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: linear-gradient(to bottom, #4ECDC4, transparent);;
+    background: linear-gradient(to bottom, #4ECDC4, transparent);
     border: 1px solid transparent;
     display: flex;
     align-items: center;
@@ -1141,4 +1141,8 @@ svg {
 }
 .datawars-profile a:active {
     color: #796878;
+}
+
+.noura{
+    color: #4ECDC4;
 }
