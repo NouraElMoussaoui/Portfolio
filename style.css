@@ -1135,6 +1135,8 @@ svg {
 
 .datawars-profile a {
     color: linear-gradient(45deg, #FF6B6B22, transparent);
+    text-decoration: none;
+    color: #66b2b2;
 }
 .datawars-profile a:hover {
     color: linear-gradient(45deg, transparent, #4ECDC4); 
