@@ -7,14 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             link.classList.add('animate');
         }, index * 200);
-
-        // Add hover sound effect (optional)
-        link.addEventListener('mouseenter', () => {
-            // Create subtle hover sound
-            const hoverSound = new Audio('data:audio/wav;base64,UklGRhwAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=');
-            hoverSound.volume = 0.1;
-            hoverSound.play().catch(() => { }); // Catch and ignore if audio playback is blocked
-        });
     });
 
     function createParticle(x, y) {
@@ -128,7 +120,6 @@ gsap.from('.intro-container', {
 
 // Advanced 3D Background Symbols Generator
 function generate3DBackground() {
-    // More complex symbols that represent math, code, and abstract concepts
     const symbols = [
         '∫', '∑', '∏', '√', 'π', 'λ',
         '{', '}', '[', ']', '(', ')',
